@@ -1,0 +1,29 @@
+.form-control{
+    border: none;
+    background-color: rgba(210, 210, 210, 0.342);
+    height: 45px;
+    border-radius: 50px;
+    padding-left: 20px;
+}
+.message-textarea{
+    height: 90px;
+    border-radius: 30px;
+}
+.submit-btn{
+    background-color: black;
+    border-radius: 50px;
+    height: 45px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+.form-control::placeholder{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 19px;
+    color: #3b3b3b;
+}
+.form-label{
+    color: black;
+    font-weight: 600;
+}
