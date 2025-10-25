@@ -127,6 +127,7 @@ const CategoryCarousel = () => {
                 objectFit: "cover",
                 display: "block",
                 margin: "0 auto",
+                cursor: "pointer",
               }}
             />
             <h6 style={{ fontWeight: 800 }}>{category.name}</h6>

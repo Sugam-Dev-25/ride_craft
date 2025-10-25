@@ -87,7 +87,7 @@ const Footer = () => {
               />
               <button
                 className="btn text-light"
-                style={{ backgroundColor: "#ff4c00",  }}
+                style={{ backgroundColor: "#ff4c00" }}
               >
                 <FaPaperPlane size={18} />
               </button>
@@ -170,33 +170,33 @@ const Footer = () => {
             </div>
 
             <h6 className="fw-bold text-uppercase mb-3">Payment Method</h6>
-            <div className="d-flex justify-content-md-end justify-content-center gap-2 flex-wrap" >
+            <div className="d-flex justify-content-md-end justify-content-center gap-2 flex-wrap">
               <img
-                src="public/f5.png"
+                src="/f5.png"
                 alt="MasterCard"
                 width="50"
                 style={{borderRadius:"10px"}}
               />
               <img
-                src="public/f4.png"
+                src="/f4.png"
                 alt="PayPal"
                 width="50"
                 style={{borderRadius:"10px"}}
               />
               <img
-                src="public/f3.png"
+                src="/f3.png"
                 alt="Amex"
                 width="50"
                 style={{borderRadius:"10px"}}
               />
               <img
-                src="public/f2.png"
+                src="/f2.png"
                 alt="Bitcoin"
                 width="50"
                 style={{borderRadius:"10px"}}
               />
               <img
-                src="public/f1.png"
+                src="/f1.png"
                 alt="Visa"
                 width="50"
                 style={{borderRadius:"10px"}}
