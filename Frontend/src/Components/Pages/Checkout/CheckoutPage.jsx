@@ -21,10 +21,9 @@ const CheckoutPage = () => {
   });
 
   const subtotal = items.reduce(
-  (acc, item) => acc + (item.productId?.salePrice || 0) * (item.quantity || 1),
-  0
-);
-
+    (acc, item) => acc + (item.productId?.salePrice || 0) * (item.quantity || 1),
+    0
+  );
 
   const shippingCost = form.shippingMode === "home" ? 9.9 : 0;
   const grandTotal = subtotal + shippingCost;
@@ -32,19 +31,26 @@ const CheckoutPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // ✅ simple frontend validation
+    for (const [key, val] of Object.entries(form)) {
+      if (!val && key !== "shippingMode") {
+        alert(`${key} is required`);
+        return;
+      }
+    }
+
     const orderData = {
       ...form,
       items: items.map((i) => ({
-  productId: i.productId?._id,
-  title: i.productId?.title,
-  quantity: i.quantity,
-  price: i.productId?.salePrice,
-  category: i.productId?.category,
-  brand: i.productId?.brand,
-  image: i.productId?.image,
-  totalAmount: (i.productId?.salePrice || 0) * (i.quantity || 1),
-})),
-
+        productId: i.productId?._id,
+        title: i.productId?.title,
+        quantity: i.quantity,
+        price: i.productId?.salePrice,
+        category: i.productId?.category,
+        brand: i.productId?.brand,
+        image: i.productId?.image,
+        totalAmount: (i.productId?.salePrice || 0) * (i.quantity || 1),
+      })),
       grandTotal,
     };
 
@@ -53,6 +59,7 @@ const CheckoutPage = () => {
       navigate("/order-success", { state: data.order });
     } catch (error) {
       console.error("Order failed:", error);
+      alert("Order failed. Please try again.");
     }
   };
 
@@ -154,6 +161,7 @@ const CheckoutPage = () => {
           <input
             type="email"
             className="form-control"
+            required
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
           />
@@ -167,6 +175,7 @@ const CheckoutPage = () => {
               name="ship"
               checked={form.shippingMode === "pickup"}
               onChange={() => setForm({ ...form, shippingMode: "pickup" })}
+              required
             />{" "}
             Store Pickup (Free)
           </div>
@@ -176,21 +185,18 @@ const CheckoutPage = () => {
               name="ship"
               checked={form.shippingMode === "home"}
               onChange={() => setForm({ ...form, shippingMode: "home" })}
+              required
             />{" "}
-            Home Delivery (9.90$)
+            Home Delivery ($9.90)
           </div>
         </div>
 
         <div className="col-12 text-end">
-  <button className="btn btn-dark px-4">
-    Confirm Order — $
-    {(
-      subtotal + 
-      (form.shippingMode === "home" ? 9.9 : 0)
-    ).toFixed(2)}
-  </button>
-</div>
-
+          <button className="btn btn-dark px-4">
+            Confirm Order — $
+            {(subtotal + (form.shippingMode === "home" ? 9.9 : 0)).toFixed(2)}
+          </button>
+        </div>
       </form>
     </div>
   );

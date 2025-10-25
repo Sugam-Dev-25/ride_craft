@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { createContact, getContacts } from '../../../service/api';
-import "./contact-form.css"
+import "./contact-form.css";
 
 const ContactForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -34,18 +34,18 @@ const ContactForm = () => {
 
   return (
     <div className="container mt-5">
-
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* Full Name */}
         <div className="mb-3">
-          <label className="form-label" style={{fontWeight:"800", fontSize:"20px", lineHeight:"2" }}>Full Name</label>
+          <label className="form-label" style={{ fontWeight:"800", fontSize:"20px", lineHeight:"2" }}>
+            Full Name
+          </label>
           <div className="d-flex">
             <input
               type="text"
               className="form-control me-2"
               placeholder="First Name"
               {...register('firstName', { required: 'First name is required' })}
-              
             />
             <input
               type="text"
@@ -60,12 +60,14 @@ const ContactForm = () => {
 
         {/* Address */}
         <div className="mb-3">
-          <label className="form-label" style={{fontWeight:"800", fontSize:"20px", lineHeight:"2" }}>Address</label>
+          <label className="form-label" style={{ fontWeight:"800", fontSize:"20px", lineHeight:"2" }}>
+            Address
+          </label>
           <div className="d-flex">
             <input
               type="text"
               className="form-control me-2"
-              placeholder="Address"
+              placeholder="Street Address"
               {...register('streetAddress', { required: 'Street Address is required' })}
             />
             <input
@@ -95,7 +97,9 @@ const ContactForm = () => {
 
         {/* Contact Information */}
         <div className="mb-3">
-          <label className="form-label" style={{fontWeight:"800", fontSize:"20px", lineHeight:"2" }}>Contact Information</label>
+          <label className="form-label" style={{ fontWeight:"800", fontSize:"20px", lineHeight:"2" }}>
+            Contact Information
+          </label>
           <div className="d-flex">
             <input
               type="email"
@@ -107,15 +111,18 @@ const ContactForm = () => {
               type="tel"
               className="form-control"
               placeholder="Phone"
-              {...register('phone')}
+              {...register('phone', { required: 'Phone is required' })}
             />
           </div>
           {errors.email && <small className="text-danger">{errors.email.message}</small>}
+          {errors.phone && <small className="text-danger">{errors.phone.message}</small>}
         </div>
 
         {/* Message */}
         <div className="mb-3">
-          <label className="form-label" style={{fontWeight:"800", fontSize:"20px", lineHeight:"2" }}>Message</label>
+          <label className="form-label" style={{ fontWeight:"800", fontSize:"20px", lineHeight:"2" }}>
+            Message
+          </label>
           <textarea
             className="form-control message-textarea"
             rows="4"
@@ -141,9 +148,6 @@ const ContactForm = () => {
         {/* Submit Button */}
         <button type="submit" className="btn btn-dark w-100 submit-btn">Submit</button>
       </form>
-
-      {/* Display Submitted Messages */}
-      {/* <MessagesTable data={formData} /> */}
     </div>
   );
 };

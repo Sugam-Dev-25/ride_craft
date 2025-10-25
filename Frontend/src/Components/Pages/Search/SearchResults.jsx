@@ -120,7 +120,7 @@ const SearchResults = () => {
                       src={
                         product.image?.startsWith("http")
                           ? product.image
-                          : `http://localhost:5000${product.image}`
+                          : `https://ridecraft-backend.onrender.com${product.image}`
                       }
                       alt={product.title}
                       className="card-img-top"

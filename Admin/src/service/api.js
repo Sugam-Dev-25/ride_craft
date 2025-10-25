@@ -2,7 +2,7 @@ import axios from "axios";
 
 // 🔹 Common API instance
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // change if deployed
+  baseURL: "https://ridecraft-backend.onrender.com/api", // change if deployed
 });
 
 // ==========================

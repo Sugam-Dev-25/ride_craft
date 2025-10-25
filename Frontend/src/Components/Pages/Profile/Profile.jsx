@@ -23,7 +23,7 @@ const Profile = () => {
           <div className="profile-image-container">
             {user.profilePic ? (
               <img
-                src={`http://localhost:5000${user.profilePic}`}
+                src={`https://ridecraft-backend.onrender.com${user.profilePic}`}
                 alt="Profile"
                 className="rounded-circle border border-3 border-gray shadow-sm"
                 width="375"

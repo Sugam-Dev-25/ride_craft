@@ -65,7 +65,7 @@ const WishlistPage = () => {
                 {/* ✅ Clickable Image with Link */}
                 <Link to={`/product/${slug}`} state={{ product }}>
                   <img
-                    src={`http://localhost:5000${product.image}`}
+                    src={`https://ridecraft-backend.onrender.com${product.image}`}
                     alt={product.title}
                     className="card-img-top"
                     style={{ height: "200px", objectFit: "cover" }}

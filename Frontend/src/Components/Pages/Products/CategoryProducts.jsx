@@ -157,7 +157,7 @@ const handleToggleWishlist = async (product) => {
                     onClick={() => navigate(`/product/${slug}`, { state: { product } })}
                   >
                     <img
-                      src={`http://localhost:5000${product.image}`}
+                      src={`https://ridecraft-backend.onrender.com${product.image}`}
                       alt={product.title}
                       className="card-img-top"
                       height="220px"

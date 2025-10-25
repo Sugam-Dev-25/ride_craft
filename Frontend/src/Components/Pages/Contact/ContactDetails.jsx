@@ -15,6 +15,8 @@ import {
 import { BsFillQuestionCircleFill } from "react-icons/bs";
 import { RiMessageFill } from "react-icons/ri";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import BannerImage1 from "../../../../public/BannerImage1.png"; // path ঠিক করে নাও
+
 
 
 const ContactDetails = () => {
@@ -35,7 +37,7 @@ const ContactDetails = () => {
           <div className="card border-0 p-4">
             {/* Top Image */}
             <img
-              src="public/BannerImage1.png"
+              src={BannerImage1}
               alt="Contact"
               className="img-fluid rounded mb-4 shadow-md"
               style={{ height: "300px", objectFit: "cover", width: "100%" }}

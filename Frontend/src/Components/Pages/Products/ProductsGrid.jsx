@@ -55,7 +55,7 @@ const ProductsGrid = () => {
               <div className="card h-100 shadow-sm border-0" style={{ borderRadius: "20px", overflow: "hidden" }}>
                 <Link to={`/product/${slug}`} state={{ product }}>
                   <img
-                    src={`http://localhost:5000${product.image}`}
+                    src={`https://ridecraft-backend.onrender.com${product.image}`}
                     alt={product.title}
                     className="card-img-top"
                     height="200px"

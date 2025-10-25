@@ -50,7 +50,7 @@ const Register = () => {
               <h3 className="text-center mb-4 fw-bold text-success">Create Account</h3>
 
               <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
-                {/* Name & Email & Password */}
+                {/* Name */}
                 <div className="mb-3">
                   <label className="form-label fw-semibold">Full Name</label>
                   <input
@@ -62,6 +62,7 @@ const Register = () => {
                   {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
                 </div>
 
+                {/* Email */}
                 <div className="mb-3">
                   <label className="form-label fw-semibold">Email</label>
                   <input
@@ -73,6 +74,7 @@ const Register = () => {
                   {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
                 </div>
 
+                {/* Password */}
                 <div className="mb-3">
                   <label className="form-label fw-semibold">Password</label>
                   <input
@@ -106,44 +108,82 @@ const Register = () => {
                   <label className="form-label fw-semibold">Address</label>
                   <input
                     type="text"
-                    className="form-control"
+                    className={`form-control ${errors.address ? "is-invalid" : ""}`}
                     placeholder="Your address"
-                    {...register("address")}
+                    {...register("address", { required: "Address is required" })}
                   />
+                  {errors.address && (
+                    <div className="invalid-feedback">{errors.address.message}</div>
+                  )}
                 </div>
 
                 {/* Country, State, District, Pincode */}
                 <div className="row g-3 mb-3">
                   <div className="col-md-6">
                     <label className="form-label fw-semibold">Country</label>
-                    <input type="text" className="form-control" {...register("country")} />
+                    <input
+                      type="text"
+                      className={`form-control ${errors.country ? "is-invalid" : ""}`}
+                      {...register("country", { required: "Country is required" })}
+                    />
+                    {errors.country && (
+                      <div className="invalid-feedback">{errors.country.message}</div>
+                    )}
                   </div>
+
                   <div className="col-md-6">
                     <label className="form-label fw-semibold">State</label>
-                    <input type="text" className="form-control" {...register("state")} />
+                    <input
+                      type="text"
+                      className={`form-control ${errors.state ? "is-invalid" : ""}`}
+                      {...register("state", { required: "State is required" })}
+                    />
+                    {errors.state && (
+                      <div className="invalid-feedback">{errors.state.message}</div>
+                    )}
                   </div>
+
                   <div className="col-md-6">
                     <label className="form-label fw-semibold">District</label>
-                    <input type="text" className="form-control" {...register("district")} />
+                    <input
+                      type="text"
+                      className={`form-control ${errors.district ? "is-invalid" : ""}`}
+                      {...register("district", { required: "District is required" })}
+                    />
+                    {errors.district && (
+                      <div className="invalid-feedback">{errors.district.message}</div>
+                    )}
                   </div>
+
                   <div className="col-md-6">
                     <label className="form-label fw-semibold">Pincode</label>
-                    <input type="text" className="form-control" {...register("pincode")} />
+                    <input
+                      type="text"
+                      className={`form-control ${errors.pincode ? "is-invalid" : ""}`}
+                      {...register("pincode", { required: "Pincode is required" })}
+                    />
+                    {errors.pincode && (
+                      <div className="invalid-feedback">{errors.pincode.message}</div>
+                    )}
                   </div>
                 </div>
 
                 {/* Profile Picture */}
                 <div className="mb-3">
                   <label className="form-label fw-semibold">Profile Picture</label>
-                  <input type="file" className="form-control" {...register("profilePic")} />
+                  <input
+                    type="file"
+                    className={`form-control ${errors.profilePic ? "is-invalid" : ""}`}
+                    {...register("profilePic", { required: "Profile picture is required" })}
+                  />
+                  {errors.profilePic && (
+                    <div className="invalid-feedback">{errors.profilePic.message}</div>
+                  )}
                 </div>
 
                 {/* Submit */}
                 <div className="d-grid mt-4">
-                  <button
-                    type="submit"
-                    className="btn btn-success btn-lg fw-semibold rounded-5"
-                  >
+                  <button type="submit" className="btn btn-success btn-lg fw-semibold rounded-5">
                     Register
                   </button>
                 </div>

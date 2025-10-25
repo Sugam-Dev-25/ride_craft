@@ -13,7 +13,7 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
   console.log('uploads folder created automatically');
 }
-
+ 
 // Middlewares
 app.use(cors());
 app.use(express.json());

@@ -101,7 +101,7 @@ const Header = () => {
               {/* Display the user profile picture */}
               {user?.profilePic ? (
                 <img
-                  src={`http://localhost:5000${user.profilePic}`}
+                  src={`https://ridecraft-backend.onrender.com${user.profilePic}`}
                   alt="User Profile"
                   width="40"
                   height="40"

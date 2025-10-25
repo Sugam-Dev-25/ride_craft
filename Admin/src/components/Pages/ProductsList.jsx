@@ -94,7 +94,7 @@ const ProductsList = () => {
                     <td>
                       {p.image ? (
                         <img
-                          src={`http://localhost:5000${p.image}`}
+                          src={`https://ridecraft-backend.onrender.com${p.image}`}
                           alt={p.title}
                           width="60"
                           height="60"
@@ -105,7 +105,7 @@ const ProductsList = () => {
                         <span className="text-muted">No Image</span>
                       )}
                     </td>
-                    <td>{p.title}</td>
+                    <td>{p.title}</td> 
                     <td
                       style={{
                         maxWidth: "200px",

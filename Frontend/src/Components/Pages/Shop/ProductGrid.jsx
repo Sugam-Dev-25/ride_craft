@@ -63,7 +63,7 @@ const ProductGrid = ({ products, isLoading }) => {
                 {/* ✅ Image click → Product Details */}
                 <Link to={`/product/${slug}`} state={{ product: p }}>
                   <img
-                    src={`http://localhost:5000${p.image}`}
+                    src={`https://ridecraft-backend.onrender.com${p.image}`}
                     alt={p.title}
                     className="card-img-top"
                     style={{ objectFit: "cover", height: "200px", cursor: "pointer" }}

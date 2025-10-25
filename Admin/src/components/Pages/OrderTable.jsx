@@ -71,7 +71,7 @@ const OrderTable = ({ orders }) => {
                           {/* Image */}
                           {item.image && (
                             <img
-                              src={`http://localhost:5000${item.image}`}
+                              src={`https://ridecraft-backend.onrender.com${item.image}`}
                               alt={item.title}
                               style={{
                                 width: "50px",

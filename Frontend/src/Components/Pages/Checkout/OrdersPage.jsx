@@ -61,7 +61,7 @@ const OrderSuccessPage = () => {
                   src={
                     item.image?.startsWith("http")
                       ? item.image
-                      : `http://localhost:5000${item.image}` // ✅ Add backend base URL
+                      : `https://ridecraft-backend.onrender.com${item.image}` // ✅ Add backend base URL
                   }
                   alt={item.title}
                   width="80"

@@ -111,7 +111,7 @@ const ProductDetails = () => {
         {/* Product Image */}
         <div className="col-md-6 mb-4">
           <img
-            src={`http://localhost:5000${product.image}`}
+            src={`https://ridecraft-backend.onrender.com${product.image}`}
             alt={product.title}
             className="img-fluid rounded"
             style={{ objectFit: "cover" }}
