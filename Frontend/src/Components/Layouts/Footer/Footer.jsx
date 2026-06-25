@@ -10,7 +10,7 @@ import {
   FaPaperPlane,
 } from "react-icons/fa";
 
-import bgImg from "../../../../public/footer-bg-2.png";
+import bgImg from "../../../assets/Footer-bg.png";
 
 const Footer = () => {
   return (
