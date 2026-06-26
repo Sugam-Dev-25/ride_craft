@@ -11,7 +11,7 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/admin/login", data);
+      const res = await axios.post("https://ridecraft-backend.onrender.com/api/admin/login", data);
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("admin", JSON.stringify(res.data.admin));
