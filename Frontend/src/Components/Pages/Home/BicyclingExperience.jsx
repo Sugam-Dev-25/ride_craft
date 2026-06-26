@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // ✅ import Link
-import img1 from '../../../../public/grid.webp';
+import img1 from '../../../assets/grid.webp';
 
 const BicyclingExperience = () => {
   return (

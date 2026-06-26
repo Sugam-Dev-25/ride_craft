@@ -6,16 +6,26 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import Img1 from "../../../assets/1.png";
+import Img2 from "../../../assets/2.png";
+import Img3 from "../../../assets/3.png";
+import Img4 from "../../../assets/4.png";
+import Img5 from "../../../assets/5.png";
+import Img6 from "../../../assets/6.png";
+import Img7 from "../../../assets/7.png";
+import Img8 from "../../../assets/8.png";
+import Img9 from "../../../assets/9.png";
+
 const categories = [
-  { name: "Shoes", image: "/1.png" },
-  { name: "Mountain Cycle", image: "/7.png" },
-  { name: "Pants", image: "/3.png" },
-  { name: "Shirts", image: "/4.png" },
-  { name: "City Cycle", image: "/9.png" },
-  { name: "Helmets", image: "/6.png" },
-  { name: "Gloves", image: "/2.png" },
-  { name: "Road Cycle", image: "/8.png" },
-  { name: "Freeroll", image: "/5.png" },
+  { name: "Shoes", image: Img1 },
+  { name: "Mountain Cycle", image: Img7 },
+  { name: "Pants", image: Img3 },
+  { name: "Shirts", image: Img4 },
+  { name: "City Cycle", image: Img9 },
+  { name: "Helmets", image: Img6 },
+  { name: "Gloves", image: Img2 },
+  { name: "Road Cycle", image: Img8 },
+  { name: "Freeroll", image: Img5 },
 ];
 
 // ✅ Custom Arrows (Pure black + positioned outside)

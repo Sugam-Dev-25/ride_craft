@@ -5,25 +5,28 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import BannerImage1 from "../../../assets/BannerImage1.png";
+import BannerImage2 from "../../../assets/BannerImage2.png";
+import BannerImage3 from "../../../assets/BannerImage3.png";
 
 const banners = [
     {
     id: 1,
-    image: "/BannerImage3.png",
+    image: BannerImage1,
     title: "Your Journey Begins",
     subtitle: "Get ready for the ultimate biking experience.",
     button: "Get Started",
   },
   {
-    id: 1,
-    image: "/BannerImage1.png",
+    id: 2,
+    image: BannerImage2,
     title: "Ride Beyond Limits",
     subtitle: "Discover high-performance bikes for every adventure.",
     button: "Shop Now",
   },
   {
     id: 3,
-    image: "/BannerImage2.png",
+    image: BannerImage3,
     title: "Unleash the Power",
     subtitle: "Experience the thrill of speed and style.",
     button: "Explore",

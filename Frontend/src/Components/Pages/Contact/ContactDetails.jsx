@@ -15,7 +15,7 @@ import {
 import { BsFillQuestionCircleFill } from "react-icons/bs";
 import { RiMessageFill } from "react-icons/ri";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import BannerImage1 from "../../../../public/BannerImage1.png"; // path ঠিক করে নাও
+import BannerImage1 from "../../../assets/BannerImage1.png"; // path ঠিক করে নাও
 
 
 

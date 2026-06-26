@@ -1,9 +1,9 @@
 import React from "react";
 import { FaLeaf, FaShieldAlt, FaBoxOpen } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
-import image1 from '../../../../public/image-1.webp';
-import image2 from '../../../../public/image-2.webp';
-import image3 from '../../../../public/image-3.webp';
+import image1 from '../../../assets/image-1.webp';
+import image2 from '../../../assets/image-2.webp';
+import image3 from '../../../assets/image-3.webp';
 
 const BikeFeatureSection = () => {
   return (

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCartApi } from "../../../Redux/cart/cartSlice";
 import { addToWishlistApi, removeFromWishlistApi } from "../../../Redux/wishlist/wishlistSlice";
 import { getProductsByCategory } from "../../../service/api";
-import banner from "../../../../public/BannerImage5.png";
+import banner from "../../../assets/BannerImage5.png";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const CategoryProducts = () => {
