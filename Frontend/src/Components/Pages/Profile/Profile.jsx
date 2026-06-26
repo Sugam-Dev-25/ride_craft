@@ -5,6 +5,13 @@ import Logout from "../Login/Logout";
 const Profile = () => {
   const { user } = useSelector((state) => state.auth);
 
+  console.log("User Data:", user);
+console.log("Profile Pic:", user?.profilePic);
+console.log(
+  "Image URL:",
+  `https://ridecraft-backend.onrender.com${user?.profilePic}`
+);
+
   if (!user) {
     return (
       <div className="container mt-5 text-center">
@@ -22,14 +29,19 @@ const Profile = () => {
         <div className="col-md-4 d-flex justify-content-center">
           <div className="profile-image-container">
             {user.profilePic ? (
-              <img
-                src={`https://ridecraft-backend.onrender.com${user.profilePic}`}
-                alt="Profile"
-                className="rounded-circle border border-3 border-gray shadow-sm"
-                width="375"
-                height="375"
-                style={{ objectFit: "cover" }}
-              />
+             <img
+  src={`https://ridecraft-backend.onrender.com${user.profilePic}`}
+  alt="Profile"
+  className="rounded-circle border border-3 border-gray shadow-sm"
+  width="375"
+  height="375"
+  style={{ objectFit: "cover" }}
+  onLoad={() => console.log("✅ Image Loaded")}
+  onError={(e) => {
+    console.log("❌ Image Failed");
+    console.log("Failed URL:", e.target.src);
+  }}
+/>
             ) : (
               <div
                 className="bg-light rounded-circle border d-flex align-items-center justify-content-center mx-auto shadow-lg"
