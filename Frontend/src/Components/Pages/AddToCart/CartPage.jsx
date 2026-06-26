@@ -71,7 +71,7 @@ const CartPage = () => {
                 <tr key={item._id}>
                   <td className="d-flex align-items-center gap-3 py-3">
                     <img
-                      src={`http://localhost:5000${product.image}`}
+                      src={`https://ridecraft-backend.onrender.com${product.image}`}
                       alt={product.title}
                       style={{
                         width: "100px",

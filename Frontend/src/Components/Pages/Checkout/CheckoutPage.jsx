@@ -31,6 +31,9 @@ const CheckoutPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    console.log("Cart Items:", items);
+console.log("Product:", items[0]?.productId);
+
     // ✅ simple frontend validation
     for (const [key, val] of Object.entries(form)) {
       if (!val && key !== "shippingMode") {

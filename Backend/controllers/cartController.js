@@ -26,7 +26,7 @@ exports.addToCart = async (req, res) => {
     await cart.save();
     await cart.populate({
       path: "items.productId",
-      select: "title salePrice image stock color",
+      select: "title salePrice image stock color brand category",
     });
     res.json(cart);
   } catch (error) {
@@ -41,7 +41,7 @@ exports.getCart = async (req, res) => {
     const userId = req.params.userId || req.user._id;
     const cart = await Cart.findOne({ user: userId }).populate({
       path: "items.productId",
-      select: "title salePrice image stock color",
+      select: "title salePrice image stock color brand category",
     });
     if (!cart) return res.json({ items: [] });
     res.json(cart);
@@ -74,7 +74,7 @@ exports.updateCartItem = async (req, res) => {
     await cart.save();
     await cart.populate({
       path: "items.productId",
-      select: "title salePrice image stock color",
+      select: "title salePrice image stock color brand category",
     });
     res.json(cart);
   } catch (error) {
@@ -109,7 +109,7 @@ exports.removeFromCart = async (req, res) => {
     await cart.save();
     await cart.populate({
       path: "items.productId",
-      select: "title salePrice image stock color",
+      select: "title salePrice image stock color brand category",
     });
 
     res.json({
