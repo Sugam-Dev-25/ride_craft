@@ -5,7 +5,7 @@ import { PiHeartStraightLight } from "react-icons/pi";
 import { CiShoppingCart } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux"; // ✅ To access cart & wishlist counts
-import img from "../../../assets/Logo.png";
+import img from "../../../assets/Brand.png";
 import SearchBar from "./SearchBar";
 
 const Header = () => {
