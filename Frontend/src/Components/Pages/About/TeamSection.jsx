@@ -1,12 +1,12 @@
 import React from "react";
 
 // Import images
-import team1 from "../../../assets/team1.jpg";
-import team2 from "../../../assets/team2.jpg";
-import team3 from "../../../assets/team3.jpg";
-import team4 from "../../../assets/team4.jpg";
-import team5 from "../../../assets/team5.jpg";
-import team6 from "../../../assets/team6.jpg";
+import team1 from "../../../assets/Team1.jpg";
+import team2 from "../../../assets/Team2.jpg";
+import team3 from "../../../assets/Team3.jpg";
+import team4 from "../../../assets/Team4.jpg";
+import team5 from "../../../assets/Team5.jpg";
+import team6 from "../../../assets/Team6.jpg";
 
 const teamMembers = [
   { name: "Bianca Wood", role: "Sale Manager", image: team1 },
